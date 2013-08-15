@@ -87,6 +87,7 @@ public class DefaultEventBus implements EventBus {
     this.vertx = vertx;
     this.clusterMgr = clusterManager;
     this.subs = clusterMgr.getSubsMap("subs");
+    this.serverID = new ServerID(port, hostname);
     this.server = setServer(port, hostname, listenHandler);
     ManagementRegistry.registerEventBus(serverID);
   }
