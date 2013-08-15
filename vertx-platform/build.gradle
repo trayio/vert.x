@@ -19,6 +19,7 @@ import java.text.SimpleDateFormat
 apply from: "$rootDir/gradle/maven.gradle"
 
 dependencies {
+  compile 'com.amazonaws:aws-java-sdk:1.5.1' 
 	compile project(':vertx-core')
 }
 
