@@ -18,6 +18,7 @@ apply from: 'gradle/extra-tasks.gradle'
 
 buildscript {
   repositories {
+    mavenCentral()
     flatDir {
       dir 'extralibs'
     }
@@ -28,7 +29,6 @@ buildscript {
       mavenLocal()
     }
     maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
-    mavenCentral()
   }
   dependencies {
     classpath 'com.eriwen:gradle-js-plugin:1.1'
@@ -56,11 +56,11 @@ subprojects {
   group = rootProject.group
   
   repositories {
+    mavenCentral()
     if (System.getenv("VERTX_DISABLE_MAVENLOCAL") == null) {
       mavenLocal()
     }
     maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
-    mavenCentral()
   }
   
   dependencies {

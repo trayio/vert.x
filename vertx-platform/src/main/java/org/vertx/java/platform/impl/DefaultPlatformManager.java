@@ -946,6 +946,9 @@ public class DefaultPlatformManager implements PlatformManagerInternal, ModuleRe
             case "maven":
               resolver = new MavenRepoResolver(vertx, repoID);
               break;
+            case "tray":
+              resolver = new TrayRepoResolver(vertx, repoID);
+              break;
             case "bintray":
               resolver = new BintrayRepoResolver(vertx, repoID);
               break;

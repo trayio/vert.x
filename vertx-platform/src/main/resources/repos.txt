@@ -1,3 +1,6 @@
+# tray
+tray:robbie.tray.io
+
 # Local Maven repo on filesystem
 mavenLocal:~/.m2/repository
 
